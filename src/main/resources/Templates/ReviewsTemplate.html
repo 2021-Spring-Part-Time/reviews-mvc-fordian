@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="ReviewsStyles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Nunito:ital,wght@1,300&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <title >ReviewSite</title>
+</head>
+<header><h1>Review Site</h1>
+</header>
+
+<body>
+<div class="container">
+    <div class="reviews">
+        <div class="review--head" th:each="review: ${reviewsModel}">
+        <div class="review"> <a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a> <img class="img" th:src="${review.url}" width="125px"></div>
+        <div class="review--category" th:text="${review.category}"></div>
+        </div>
+
+</div>
+    <div class="footer"><small> @copy BestReviews</small></div>
+</div>
+</body>
+
+
+
+</html>

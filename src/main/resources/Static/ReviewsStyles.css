@@ -1,0 +1,40 @@
+
+
+:root {
+--ff-primary:'Nunito', sans-serif;
+--ff-secondary:'Yanone Kaffeesatz', sans-serif;
+--fw-reg: 300;
+--fw-bold: 900;
+
+--clr-primary: grey;
+--clr-secondary: light-blue;
+--clr-background: light-grey;
+
+--bs:0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+         0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15em);
+}
+
+.container{
+height: 100%;
+display: grid;
+grid-gap:3px;
+grid-template-columns: repeat(8, 1fr);
+grid-template-rows: 40px auto 40px;
+grid-template-area:
+"h h h h h h h h"
+"i i i c c c c c"
+"f f f f f f f f";
+}
+.review--head{
+grid-area: h;
+}
+
+.footer{
+background-color: var(--clr-primary);
+grid-area: f;
+bottom: 0;
+}
+
+.img {
+grid-area: i;
+}
